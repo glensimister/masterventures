@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Master Ventures</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="images/favicon-100x100.png" sizes="32x32" />
+    <link rel="icon" href="images/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png" />
+    <meta name="msapplication-TileImage" content="images/favicon.png" />
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var height = $(window).scrollTop();
+                if (height > 500) {
+                    /*$('#gradient').hide();*/
+                    $('#top').hide();
+                    $('#gradient').css("position", "fixed");
+                    $('#nav-button').css("width", "100%");
+                    /*$('#gradient').fadeIn('fast');*/
+                } else if (height < 500) {
+                    $('#top').show();
+                    $('#gradient').css("position", "absolute");
+                    $('#nav-button').css("width", "auto");
+                }
+            });
+
+            $("nav ul li a").click(function(e) {
+                e.preventDefault();
+                var aid = $(this).attr("href");
+                $('html,body').animate({
+                    scrollTop: $(aid).offset().top
+                }, 'slow');
+            });
+
+            //hide all visible sub-menus
+            //display current sub-menu 
+            //when link is clicked hide sub-menu
+
+            $('.sub-menu').on({
+                mouseenter: function() {
+                    $('.sub-menu ul').css("display", "none");
+                    $(this).find('ul').css("display", "block");
+                }
+            });
+
+            $(window).click(function() {
+                $('.sub-menu ul').css("display", "none");
+            });
+
+            $('.sub-menu ul').click(function(event) {
+                event.stopPropagation();
+            });
+            /*
+            $('.sub-menu ul').on({
+                mouseout: function(e) {
+                e.stopPropagation();
+                $(this).css("display", "none");
+                }
+            });*/
+
+            $('.sub-menu ul li').click(function() {
+                $(this).parent().slideUp();
+            });
+
+            if ($(window).width() < 700) {
+                $('nav ul li').click(function() {
+                    $('nav').hide();
+                });
+            }
+
+            $('#nav-button').click(function() {
+                $('nav').slideToggle();
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header data-parallax="scroll" data-image-src="images/header.png" id="home">
+        <div id="gradient">
+            <div id="nav-button">&#9776; MENU</div>
+            <div id="top">
+                <ul>
+                    <li><a href="https://www.instagram.com/master.ventures/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="ttps://teamroom.in/venture/#contact" target="_blank" rel="noopener noreferrer"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/masterventures" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/masterventures" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home">HOME</a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#whoweare">WHO WE ARE</a>
+                        <ul>
+                            <li>
+                                <a href="#ExecutiveTeam">EXECUTIVE TEAM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#whatwedo">WHAT WE DO</a>
+                        <ul>
+                            <li>
+                                <a href="#advis">ADVISORY</a>
+                            </li>
+                            <li>
+                                <a href="#CFOServices">CFO ADVISORY SERVICES</a>
+                            </li>
+                            <li>
+                                <a href="#labs">LABS</a>
+                            </li>
+                            <li>
+                                <a href="#CryptoEducation">MV MEDIA</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#CryptoCompound">HOUSE OF DAO</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#clients">CLIENTS</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="#careers">CAREERS</a>
+                    </li>
+                </ul>
+            </nav>
+            <div style="clear: both"></div>
+        </div>
+        <div id="left">
+            <div id="logo"><img src="images/Master-Ventures-Final-Logo-1.png" /></div>
+            <div id="intro">
+                <p>is an early stage venture and advisory firm, catalysing the next wave of disruptive blockchain technologies looking to improve outdated and centralized models.</p>
+            </div>
+            <button id="contact-button">CONTACT US</button>
+        </div>
+    </header>
+    <section id="whoweare" data-parallax="scroll" data-image-src="images/bkg-world@3xd889.png">
+        <h2>Who We Are</h2>
+        <iframe title="Dummy Video" style="max-width:800px; width:100%; height:500px; margin:auto;" src="https://www.youtube.com/embed/yAoLSRbwxL8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="fluidvids-item" data-fluidvids="loaded"></iframe>
+        <p>As early investors of Bitcoin in 2012, the team behind Master Ventures has extensive experience across a range of sectors including venture capital, business development, software engineering, marketing and token economics. With a combined 20+ years of working knowledge within the blockchain space, the Master Ventures team are at the forefront of emerging technology and look to become a driving force behind the decentralization of existing models.</p>
+    </section>
+    <section id="ExecutiveTeam" data-parallax="scroll" data-image-src="images/parallax.png">
+        <h2>MV Executive Team</h2>
+        <div class="team">
+            <div><img src="images/profile-photos/KyleChasse.jpg" />
+                <h4 class="position">Founding Partner</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/kylemv/">Kyle Chasse</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/kylemv/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div><img src="images/profile-photos/jesanew.jpg" />
+                <h4 class="position">Marketing Director</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/kylemv/">JESSICA GONZALES</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/kylemv/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div><img src="images/profile-photos/photo_2019-08-06-13.52.12.jpeg" />
+                <h4 class="position">Managing Partner</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/kreddy/">KEVIN REDDY</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/kreddy/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="team">
+            <div><img src="images/profile-photos/Michal-Herzyk.jpg" />
+                <h4 class="position">CFO</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/michalherzyk/">MICHAL HERZYK</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/michalherzyk/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div><img src="images/profile-photos/Danehoy.jpg" />
+                <h4 class="position">CBDO</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/danehoy/">DANE HOY</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/danehoy/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div><img src="images/profile-photos/Florian.jpg" />
+                <h4 class="position">COO</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/florian-van-goethem-25332450/">FLORIAN VAN GOETHEM</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/florian-van-goethem-25332450/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="team">
+            <div><img src="images/profile-photos/WojciechG%C5%82owacz.jpg" />
+                <h4 class="position">Business Analyst</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/wojciech-g%C5%82owacz-3bb10617b/">WOJCIECH GŁOWACZ</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/wojciech-g%C5%82owacz-3bb10617b/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div><img src="images/profile-photos/MartaVitvitska.jpg" />
+                <h4 class="position">Financial Analyst</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/martavitvitska/">MARTA VITVITSKA</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/martavitvitska/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <h2>Advisors</h2>
+        <div class="team">
+            <div><img src="images/profile-photos/JoseSmith-1.jpg" />
+                <h4 class="position">Technical Advisor</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/josh-smith-98b8bb3/">JOSHUA SMITH</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/josh-smith-98b8bb3/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div><img src="images/profile-photos/Lah-pat.jpg" />
+                <h4 class="position">Strategic Advisor</h4>
+                <h4 class="name"><a href="https://www.linkedin.com/in/natthanant-patcharasaksakol-02ba88156/">NATTHANANT PATCHARAKSAKOL</a></h4>
+                <ul class="details">
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                    <li>Lorem Ipsum is simply dummy text</li>
+                </ul>
+                <a class="linkedIn" href="https://www.linkedin.com/in/natthanant-patcharasaksakol-02ba88156/" target="_self">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="whatwedo" data-parallax="scroll" data-image-src="images/parallax.png">
+        <h2>What We Do</h2>
+        <p>As early investors of Bitcoin in 2012, the team behind Master Ventures has extensive experience across a range of sectors including venture capital, business development, software engineering, marketing and token economics. With a combined 20+ years of working knowledge within the blockchain space, the Master Ventures team are at the forefront of emerging technology and look to become a driving force behind the decentralization of existing models.</p>
+    </section>
+    <section id="advis" data-parallax="scroll" data-image-src="images/parallax.png">
+        <div class="spacer"></div>
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="" />
+        <div class="spacer"></div>
+        <iframe title="Dummy Video" style="max-width:800px; width:100%; height:500px; margin:auto;" src="https://www.youtube.com/embed/yAoLSRbwxL8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="fluidvids-item" data-fluidvids="loaded"></iframe>
+        <p>We offer high quality end-to-end advisory and incubation solutions to blockchain and early-stage technology projects on site or remotely.</p>
+        <button style="margin:10px 0;" class="btn btn-yellow" onclick="openCFOServices()">Click here to see Advisory Services</button><span style="width:2%"></span>
+        <button style="margin:10px 0;" class="btn btn-pink" onclick="openAdvisoryProjects()">Click here to see MV Advisory Projects</button>
+
+        <script>
+            function openCFOServices() {
+                var x = document.getElementById("CFOServicesForm");
+                document.getElementById("advisoryProjects").style.display = "none";
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function openAdvisoryProjects() {
+                var x = document.getElementById("advisoryProjects");
+                document.getElementById("CFOServicesForm").style.display = "none";
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+        </script>
+    </section>
+    <section id="CFOServicesForm" data-parallax="scroll" data-image-src="images/parallax.png">
+        <form>
+            <h2>Master Ventures provides financial and economic expertise to quality startups seeking CFO services by delivering strategic long term advisory for token based and hybrid (token and equity) Cryptocurrency startups.</h2>
+            <p>MV provides the following services:</p>
+            <p><strong>Please select</strong></p>
+            <p>
+                <input name="checkbox-762[]" type="checkbox" value="TGE Marketing and Public Relations" />
+                <label>TGE Marketing and Public Relations</label>
+            </p>
+            <p>End to End Marketing Advisory for 1E0 Campaign Launch</p>
+            <ul>
+                <li>Investor Package audit of White Paper, Term Sheet, One Pager, Use Case Document/Analysis, Competitive Analysis Grids, Pitch Deck, Website</li>
+                <li>Campaign Research, Analytics, and lEO/TGE/STO/listing, Marketing Strategy for specific exchange.</li>
+                <li>Affiliate Marketing, Social Support, Search Engine Implementation, User Acquisition Strategy, Bot Application</li>
+                <li>Introductions to influencer &amp; PR content marketing (additional fees may apply, but will be negotiated in good faith)</li>
+                <li>Community growth and project awareness analytics and campaign strategy</li>
+                <li>Editorial Content and PR Strategy</li>
+            </ul>
+            <p>
+                <input name="checkbox-763[]" type="checkbox" value="Capital Raising and Business Development" />
+                <label>Capital Raising and Business Development</label>
+            </p>
+            <p>Developing meaningful relationships between the project and existing + new networks.</p>
+            <ul>
+                <li>Creating strategic partnerships and finalizing MOUs between project and opportunity</li>
+                <li>Representing the company at conferences and meetings</li>
+                <li>Strategic Introductions to SMART capital and assistance in negotiations of investments</li>
+                <li>Private and public round valuation, strategy and execution</li>
+                <li>Vesting and bonuses period optimization</li>
+                <li>Introductions to Exchange listings and Market Makers</li>
+            </ul>
+            <p>
+                <input name="checkbox-764[]" type="checkbox" value="Business Model and Tokenomics" />Business Model and Tokenomics </p>
+            <p>Expertise and consultation over token based or hybrid (token and equity) business model and ecosystem growth.</p>
+            <ul>
+                <li>Market domination and user growth strategy</li>
+                <li>Development of token use cases within the platform</li>
+                <li>Token price growth and project monetisation strategy</li>
+                <li>User conversion and incentivization framework design</li>
+                <li>Store of value features and token liquidity management</li>
+            </ul>
+            <p>
+                <input name="checkbox-765[]" type="checkbox" value="Token Metrics and Valuation" />
+                <label>Token Metrics and Valuation</label>
+            </p>
+            <p>Market benchmarked based token metrics and valuation model</p>
+            <ul>
+                <li>Percentage structure of the tokens dedicated to each entity within the ecosystem</li>
+                <li>Token price behaviour simulation in regards to nodes, users, developers, the company, investors, miners, and others</li>
+                <li>Financial predictions and valuation (Milton Friedman Equation of Exchange - MV=PQ, Discounted Cash Flow, Market Comparisons, User Base Growth Simulation and more)</li>
+                <li>Sensitivity simulation</li>
+                <li>Visualization and summary</li>
+            </ul>
+            <p>
+                <input name="checkbox-766[]" type="checkbox" value="Financial Planning and Treasury Management" />
+                <label>Financial Planning and Treasury Management</label>
+            </p>
+            <p>Fully aligned cryptocurrency market CFO services</p>
+            <ul>
+                <li>Financial forecasting, budgeting, and reporting to the CEO and Board</li>
+                <li>Value and compensation distribution plan between equity and token holders</li>
+                <li>Financial performance measures and monitoring systems in regards to traditional and crypto finance strategy</li>
+                <li>Treasury management procedures for both, crypto and traditional finance assets</li>
+            </ul>
+            <p>
+                <input name="checkbox-767[]" type="checkbox" value="Fiscal and Monetary Policy" />
+                <label>Fiscal and Monetary Policy</label>
+            </p>
+            <p>Dedicated spending and taxing strategy for impact on the ecosystem</p>
+            <ul>
+                <li>Fee structure and ongoing updates based on the company&rsquo;s revenue and token performance</li>
+                <li>Inflation rate structure and ongoing support</li>
+                <li>Projections and strategies to cryptocurrency market events and internal company situation</li>
+                <li>Interest rate structure based on the expected ROI of staking participants</li>
+            </ul>
+            <div>
+                <h3>Tentative Timeline</h3>
+                <p>Below is the estimated timeline on listing launch through Master Ventures Services</p>
+                <p><strong>Week 1:</strong> Review Assets and prepare Tokenomics and Financial review
+                    <br /> <strong>Week 2:</strong> Iterate on Client Feedback and Start Development of all Deliverable Assets
+                    <br /> <strong>Week 3 - 7:</strong> Develop Assets and Finalize, Token Metrics &amp; Tokenomics and Financial model Collateral
+                    <br /> <strong>Week 7 - 12:</strong> Continuous improvement research and update of the model and on demand support
+                    <br /> <strong>Week 12 - 52:</strong> Market and ecosystem monitoring, monthly update sessions and recommendation in regards to financial and token strategy</p>
+            </div>
+            <div>
+                <p>
+                    <label>Name</label>
+                    <input name="text-221" size="40" type="text" value="" />
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input name="email-421" size="40" type="email" value="" />
+                </p>
+                <p>
+                    <label>Telegram</label>
+                    <input name="text-222" size="40" type="text" value="" />
+                </p>
+                <p>
+                    <label>Company/project</label>
+                    <input name="text-223" size="40" type="text" value="" />
+                </p>
+                <p>
+                    <br />
+                    <br />
+                    <input accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" name="file-395" size="40" type="file" />
+                    <br /> </p>
+                <p>
+                    <label>Message</label>
+                    <textarea cols="40" name="Message" rows="10"></textarea>
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-yellow" value="Lets work together" />
+                </p>
+            </div>
+        </form>
+    </section>
+
+
+
+
+    <section id="advisoryProjects" data-parallax="scroll" data-image-src="images/parallax.png">
+        <div>
+            <div><img src="images/logos/spl-logo.png" />
+                <iframe title="Dummy Video" style="max-width:800px; width:100%; height:auto; margin:auto;" src="https://www.youtube.com/embed/yAoLSRbwxL8?feature=oembed" frameborder="0"></iframe>
+                <p>which is – just so you know – a blockchain e-commerce platform that should speed up and improve and streamline inventory updating instantaneously across all platforms the inventory is posted on and it cuts out the middlemen – Amazon and Alibaba – in the industry that currently that an enormous sales percentage from the sellers.</p>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">One Pager</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Advisor MOU</button>
+                    </div>
+                </div>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">White Paper</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Marketing Decks</button>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div><img src="images/logos/moc_logo.png" />
+                <iframe title="Dummy Video" style="max-width:800px; width:100%; height:auto; margin:auto;" src="https://www.youtube.com/embed/yAoLSRbwxL8?feature=oembed" frameborder="0"></iframe>
+                <p>which is – just so you know – a blockchain e-commerce platform that should speed up and improve and streamline inventory updating instantaneously across all platforms the inventory is posted on and it cuts out the middlemen – Amazon and Alibaba – in the industry that currently that an enormous sales percentage from the sellers.</p>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">One Pager</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Advisor MOU</button>
+                    </div>
+                </div>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">White Paper</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Marketing Decks</button>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div><img src="images/logos/even-logo.png" />
+                <iframe title="Dummy Video" style="max-width:800px; width:100%; height:auto; margin:auto;" src="https://www.youtube.com/embed/yAoLSRbwxL8?feature=oembed" frameborder="0"></iframe>
+                <p>which is – just so you know – a blockchain e-commerce platform that should speed up and improve and streamline inventory updating instantaneously across all platforms the inventory is posted on and it cuts out the middlemen – Amazon and Alibaba – in the industry that currently that an enormous sales percentage from the sellers.</p>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">One Pager</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Advisor MOU</button>
+                    </div>
+                </div>
+                <div class="advisoryProjectsButtons">
+                    <div>
+                        <button class="btn-yellow">White Paper</button>
+                    </div>
+                    <div>
+                        <button class="btn-yellow">Marketing Decks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="CFOServices" data-parallax="scroll" data-image-src="images/parallax.png">
+        <h2>Who We Are</h2>
+    </section>
+    <section id="labs" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="CryptoEducation" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="CryptoCompound" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="portfolio" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="clients" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="contact" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section>
+    <section id="careers" data-parallax="scroll" data-image-src="images/parallax.png">
+        <img width="239" height="48" src="images/M-Advisory2.png" alt="">
+    </section> -->
+</body>
+
+</html>

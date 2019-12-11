@@ -1,0 +1,334 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body {
+    background-color: #0c1936;
+    color: #fff;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    line-height: 26px;
+}
+p {
+    margin: 15px 0;
+}
+header {
+    height: 800px;
+}
+#gradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6979166666666667) 58%, rgba(0, 0, 0, 0) 100%);
+    padding-bottom: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+#left {
+    position: absolute;
+    top: 150px;
+    z-index: 0;
+}
+#top {
+    margin-right: 10px;
+}
+#top ul {
+    width: 100%;
+    text-align: right;
+}
+#top ul li {
+    display: inline-block;
+    line-height: 50px;
+    font-size: 28px;
+}
+#top ul li a {
+    color: #fff;
+    padding: 0 10px;
+}
+#logo img {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-left: 50px;
+}
+nav {
+    margin: 10px 0 0 46px;
+    width: 100%;
+}
+nav ul {
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+nav > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #1a97f1;
+    padding: 0 5px 5px 5px;
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    color: #000;
+}
+nav ul li ul li {
+    display: block;
+}
+nav ul li ul a {
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    color: rgb(244, 143, 30);
+    padding: 10px;
+}
+nav ul li ul a:hover {
+    border-left: 4px solid rgb(244, 143, 30);
+}
+#nav-button {
+    display: none;
+    float: left;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    z-index: 999;
+}
+
+/*************** media queries ****************/
+
+@media only screen and (max-width: 700px) {
+    #nav-button {
+        display: block;
+    }
+    nav {
+        display: none;
+        margin: 0;
+        width: 100%;
+        background: #000;
+        opacity: 0.8;
+        padding: 10px 0;
+    }
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    nav > ul > li > a {
+        border: none;
+    }
+    nav ul li ul {
+        width: 100%;
+        margin: 10px 0;
+        position: static;
+        background: #191919;
+    }
+    nav ul li ul a:hover {
+        border-left: none;
+    }
+    nav ul li ul a {
+        padding: 5px;
+    }
+}
+
+/*******************************/
+
+#intro {
+    text-align: left;
+    float: left;
+    clear: left;
+    margin: 20px 0px 20px 50px;
+    font-size: 20px;
+    width: 50%;
+}
+@media only screen and (max-width: 700px) {
+    #intro {
+        font-size: 16px;
+        width: 70%;
+    }
+}
+#contact-button {
+    float: left;
+    clear: left;
+    margin-left: 50px;
+}
+button {
+    color: rgb(0, 0, 0);
+    background-color: rgb(244, 143, 30);
+    border: none;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+button:hover {
+    background-color: rgb(223, 56, 76);
+    cursor: pointer;
+}
+section {
+    padding: 50px;
+}
+h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 55px;
+    font-weight: 400;
+}
+.team {
+    margin-top: 80px;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+/*************** media queries ****************/
+
+@media only screen and (max-width: 700px) {
+    h2 {
+        font-size: 35px;
+    }
+    .team {
+        display: block;
+    }
+}
+
+/*******************************/
+
+.team img {
+    border-radius: 50%;
+    width: 180px;
+    height: auto;
+}
+.name {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#d91c5c, #f6921e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.position {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.details {
+    margin-bottom: 30px;
+}
+.linkedIn {
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #fff;
+    background: #f48f1e;
+    font-size: 20px;
+    display: block;
+    width: 20px;
+    margin: 50px auto;
+}
+.spacer {
+    width: 100%;
+    height: 30px;
+}
+#CFOServicesForm {
+    margin-top: 30px;
+    display: none;
+    text-align: left;
+}
+#CFOServicesForm h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+#CFOServicesForm strong,
+#CFOServicesForm h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff1e66;
+}
+#CFOServicesForm ul li {
+    list-style: circle;
+    text-indent: 20px;
+}
+#CFOServicesForm label {
+    color: #f5901e;
+    font-weight: bold;
+    font-size: 21px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+}
+#advisoryProjects {
+    display: none;
+}
+#advisoryProjects > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+.advisoryProjectsButtons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+.advisoryProjectsButtons button {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+/*************** media queries ****************/
+
+@media only screen and (max-width: 700px) {
+    #advisoryProjects > div {
+        display: block;
+    }
+}
+
+/*******************************/
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+}
+.btn-yellow {
+    background-color: #f48f1e;
+    color: #fff;
+}
+.btn-yellow:hover {
+    background-color: #df384c;
+}
+.btn-pink {
+    background-color: #df384c;
+    color: #fff;
+}
+.btn-pink:hover {
+    background-color: #f48f1e;
+}
